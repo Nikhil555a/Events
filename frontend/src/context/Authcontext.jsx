@@ -4,7 +4,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const authDataContext = createContext();
 
 const Authcontext = ({ children }) => {
-  const serverurl = https://events-backend2-nwra.onrender.com
+  const serverurl = "https://events-backend2-nwra.onrender.com"
   const [user, setUser] = useState(null);
 
   // Refresh ke baad localStorage se user wapas load kare
