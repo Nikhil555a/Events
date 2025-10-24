@@ -58,7 +58,7 @@ const EventPublish = ({ banner, setBanner, bannerPreview, setBannerPreview }) =>
       });
 
       // ✅ Step 2: Mark event as published (update existing event)
-      await axios.put(`http://localhost:5000/api/events/${currentEvent._id}`, {
+      await axios.put(`https://events-backend2-nwra.onrender.com/api/events/${currentEvent._id}`, {
         isPublished: true,
       });
 
