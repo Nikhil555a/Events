@@ -16,8 +16,8 @@ const EventDetailsPage = () => {
     const fetchEventAndTickets = async () => {
       try {
         const [eventRes, ticketsRes] = await Promise.all([
-          axios.get(`http://localhost:5000/api/events/${id}`),
-          axios.get(`http://localhost:5000/api/events/${id}/tickets`),
+          axios.get(`https://events-backend2-nwra.onrender.com/api/events/${id}`),
+          axios.get(`https://events-backend2-nwra.onrender.com/api/events/${id}/tickets`),
         ]);
 
         setEvent(eventRes.data);
