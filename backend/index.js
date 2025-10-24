@@ -26,7 +26,7 @@ app.use(cookieParser());
 // ✅ Fix 3: Proper CORS config
 app.use(
   cors({
-    origin: "http://localhost:5280", // your frontend URL
+    origin: "https://events-frontend1.onrender.com", // your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
