@@ -53,7 +53,7 @@ const SideTicketBar = ({ isOpen, onClose, onSave, eventId }) => {
       };
 
       const response = await axios.post(
-        `http://localhost:5000/api/events/${eventId}/tickets`,
+        `https://events-backend2-nwra.onrender.com/api/events/${eventId}/tickets`,
         { tickets: [ticketPayload] }
       );
 
