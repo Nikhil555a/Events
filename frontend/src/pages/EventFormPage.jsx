@@ -172,7 +172,7 @@ const RecordedEventFields = ({ recorded, setRecorded }) => {
 
 // ---------------------- Main Component ----------------------
 
-const API_CREATE_EVENT = "https://events-backend2-nwra.onrender.com/api/events"; // assumed API
+// const API_CREATE_EVENT = "https://events-backend2-nwra.onrender.com/api/events"; // assumed API
 
 const EventFormPage = ({ videoPlacement = 'sidebar', prefill = {}, showSidebarVideo = true }) => {
   // --- UI state from your original file ---
@@ -351,7 +351,7 @@ const EventFormPage = ({ videoPlacement = 'sidebar', prefill = {}, showSidebarVi
         timeout: 120000, // 2 min
       };
 
-      const resp = await axios.post(API_CREATE_EVENT, formData, config);
+      const resp = await axios.post("https://events-backend2-nwra.onrender.com/api/events", formData, config);
 
       setMessage('Event created successfully.');
       setErrorMessage(null);
