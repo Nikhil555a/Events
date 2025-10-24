@@ -28,7 +28,7 @@ const EventCard = ({ event = {} }) => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const res = await axios.get("http://localhost:5000/api/events");
+      const res = await axios.get("https://events-backend2-nwra.onrender.com/api/events");
       const publishedEvents = res.data.filter(event => event.isPublished);
       setEvents(publishedEvents);
     };
