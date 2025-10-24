@@ -53,7 +53,7 @@ const EventPublish = ({ banner, setBanner, bannerPreview, setBannerPreview }) =>
       formData.append("startTime", currentEvent.startTime || "");
        formData.append("eventId", currentEvent._id); // ✅ FIXED
 
-      await axios.post("http://localhost:5000/api/publish", formData, {
+      await axios.post("https://events-backend2-nwra.onrender.com/api/publish", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
