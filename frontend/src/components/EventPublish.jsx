@@ -329,12 +329,12 @@ const EventPublish = ({ banner, setBanner, bannerPreview, setBannerPreview }) =>
       formData.append("startTime", currentEvent.startTime || "");
        formData.append("eventId", currentEvent._id); // ✅ FIXED
 
-      await axios.post("http://localhost:5000/api/publish", formData, {
+      await axios.post("https://events-backend2-nwra.onrender.com/api/publish", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
       // ✅ Step 2: Mark event as published (update existing event)
-      await axios.put(`http://localhost:5000/api/events/${currentEvent._id}`, {
+      await axios.put(`https://events-backend2-nwra.onrender.com/api/events/${currentEvent._id}`, {
         isPublished: true,
       });
 
