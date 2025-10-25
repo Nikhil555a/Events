@@ -1109,7 +1109,7 @@ const EventFormPage = ({ videoPlacement = 'sidebar', prefill = {}, showSidebarVi
         timeout: 120000, // 2 min
       };
 
-      const resp = await axios.post(API_CREATE_EVENT, formData, config);
+  const resp = await axios.post("https://events-backend2-nwra.onrender.com/api/events", formData, config);
       setMessage('Event created successfully.');
       setErrorMessage(null);
       // console.log(formData)
