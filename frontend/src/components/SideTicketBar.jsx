@@ -62,7 +62,7 @@ const SideTicketBar = ({ isOpen, onClose, onSave, eventId }) => {
       // ✅ Pass full ticket info (with organizer) back to AddTicket state
       if (onSave) onSave({ ...ticketPayload, _id: response.data.tickets[0]._id });
 
-      alert("Ticket saved successfully!");
+   
       onClose();
     } catch (error) {
       console.error("Error saving ticket:", error);
