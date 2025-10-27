@@ -338,7 +338,7 @@ const EventPublish = ({ banner, setBanner, bannerPreview, setBannerPreview }) =>
         isPublished: true,
       });
 
-      alert("✅ Event published successfully!");
+      
       navigate("/"); // redirect to home or event list page
     } catch (error) {
       console.error("❌ Publish Error:", error);
