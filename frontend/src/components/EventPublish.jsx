@@ -61,7 +61,7 @@ const EventPublish = ({ banner, setBanner, bannerPreview, setBannerPreview }) =>
       });
 
       // ✅ Success Toast
-      toast.success("🎉 Event Published Successfully!");
+      toast.success("🎉 Event Published Successfully");
 
       // Optional: Redirect after short delay
       setTimeout(() => navigate("/"), 2000);
