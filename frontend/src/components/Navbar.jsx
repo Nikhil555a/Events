@@ -32,6 +32,15 @@ const Navbar = () => {
     //  ✅ context se user aur logoutUser dono le lo
   const { user, logoutUser } = useContext(authDataContext);
 
+
+    const [redirect, setRedirect] = useState(false);
+
+  useEffect(() => {
+    if (redirect) {
+      navigate("/create-event");
+    }
+  }, [redirect, navigate]);
+
   // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -294,7 +303,8 @@ const Navbar = () => {
 
               <h2 className="text-sm font-bold text-gray-800 mt-4 mb-2">HOST CONTROL</h2>
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-700 cursor-pointer"  onClick={() => navigate("/create-event")}>
+                 {/* <div className="flex items-center space-x-3 text-gray-700 cursor-pointer"  onClick={() => navigate("/create-event")}>  */}
+                 <div className="flex items-center space-x-3 text-gray-700 cursor-pointer" onClick={() => setRedirect(true)}> 
                   <FaPlusCircle className="text-xl" />
                   <span className="text-lg">Create an event</span>
                 </div>
